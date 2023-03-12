@@ -7133,9 +7133,26 @@ button.bg-dark:focus {
   display: block;
   content: "";
 }
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-container .embed-responsive {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.video-container video {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 
 .embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
 .embed-responsive embed,
 .embed-responsive object,
 .embed-responsive video {
@@ -7161,8 +7178,14 @@ button.bg-dark:focus {
 }
 
 .embed-responsive-1by1::before {
-  padding-top: 100%;
+  padding-top: 120%;
 }
+
+
+.embed-responsive-xbyx::before {
+  padding-top: 150%;
+}
+
 
 .flex-row {
   -ms-flex-direction: row !important;
