@@ -2806,6 +2806,38 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 
+
+.container-magnify {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+}
+
+.video-magnify {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-origin: top left;
+}
+.box-magnify {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container-magnify:hover .video-magnify {
+  transform: scale(2);
+}
+
 .btn-light.disabled, .btn-light:disabled {
   color: #212529;
   background-color: #f8f9fa;
@@ -5260,17 +5292,36 @@ a.badge-dark:focus, a.badge-dark.focus {
 .jumbotron {
   /* padding: 1rem 1rem; */
   margin-bottom: 1rem;
-  background-color: #F5F6F8; /*#e9ecef;*/ 
+  /* background-color: #F5F6F8; /*#e9ecef;*/  */
   border-radius: 0.3rem;
 }
 
 @media (min-width: 576px) {
   .jumbotron {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
   }
 }
 
 .jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+.jumbotron-grey {
+  /* padding: 1rem 1rem; */
+  margin-bottom: 1rem;
+  background-color: #F5F6F8;
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+  .jumbotron-grey {
+    padding: 1rem 2rem;
+  }
+}
+
+.jumbotron-grey-fluid {
   padding-right: 0;
   padding-left: 0;
   border-radius: 0;
@@ -7146,12 +7197,31 @@ button.bg-dark:focus {
 }
 
 .video-container video {
+  /* width: 50%; */
+  margin: 0;
+  padding: 0;
+  display: block;
+  z-index: 0;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container .embed-responsive {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-container img {
   width: 50%;
   margin: 0;
   padding: 0;
   display: block;
 }
-
 .embed-responsive .embed-responsive-item,
 .embed-responsive embed,
 .embed-responsive object,
@@ -7169,10 +7239,13 @@ button.bg-dark:focus {
   padding-top: 42.857143%;
 }
 
-.embed-responsive-16by9::before {
+.embed-responsive-video-16by9::before {
   padding-top: 56.25%;
 }
 
+.embed-responsive-image-16by9::before {
+  padding-top: 0.25%;
+}
 .embed-responsive-4by3::before {
   padding-top: 75%;
 }
@@ -9986,6 +10059,11 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-fig {
+  padding-bottom: 15px;
+  font-size: 14px;
 }
 
 @media (min-width: 576px) {
