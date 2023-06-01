@@ -53,7 +53,7 @@
             <div class="column">
               <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/Heng14/DyLiN" role="button" target="_blank">
                 <i class="fa fa-github"></i> Code</a> </p>
-          </div>
+            </div>
           </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
     <div class="jumbotron-grey">
       <div class="row">
         <div class="col-12 text-center">
-          <h3>Abstract & Method</h3>
+          <h3><b>Abstract & Method</b></h3>
           <br>
           <div class="row" style="margin-bottom:5px">
             <div class="col" style="text-align:center">
@@ -102,20 +102,7 @@
           </p>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col-12 text-center">
-          <h3>Method</h3>
-          <br>
-          <div class="row" style="margin-bottom:5px">
-            <div class="col" style="text-align:center">
-              <img class="thumbnail" src="./images/DyLiN.png" style="width:70%; margin-bottom:20px">
-            </div>
-          </div>
-          <p class="text-left">
-            
-          </p>
-        </div>
-      </div> -->
+
     </div>
   </section>
   <br>
@@ -123,13 +110,22 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h3>Results</h3>
-          <br>
+          <h3><b>Video</b></h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8UGWWYJrv3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3><b>Faster Rendering</b></h3>
           <p class="text-left"> Below demonstrates the rendering quality and speed of our DyLiN method (Right) compared to HyperNeRF
             (Left), the previous state-of-the-art, on real scenes.</p>
-          <h6>&#128512; NOTE: The Left video is not a still image; it is just moving at 0.34 FPS, while ours renders at
+          <h6 class="text-center">&#128512; NOTE: The Left video is not a still image; it is just moving at 0.34 FPS, while ours renders at
             a smooth(er) 8.6 FPS!&#128512; </h6>
-          <br>
           <div class="video-container">
             <div class="embed-responsive embed-responsive-video-16by9">
               <video width="640" height="360" autoplay loop muted>
@@ -146,24 +142,92 @@
               </video>
             </div>
           </div>
-          <br>
-          <br>
-          <p class="text-left">We also tested DyLiN on synthetic scenes. In addition to significantly faster render times, we achieve
-            superior fidelity! Ours-1 and Ours-2 were trained without and with fine-tuning on the original data, respectively.
-          </p>
-          <div class="row" style="margin-bottom:5px">
-            <div class="col" style="text-align:center">
-              <img class="thumbnail" src="./images/synthetic.png" style="width:90%; margin-bottom:20px">
-            </div>
-          </div>
-          <br>
-          <h5>More videos are on the way! Videos will demonstrate our CoDyLiN method, an extension of DyLiN to the controllable scenario.</h5>
         </div>
       </div>
     </div>
   </section>
   <br>
-
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3><b>Increased Visual Clarity</h3><b></b></h3>
+          <p class="text-left"> We also tested DyLiN on synthetic scenes. In addition to significantly faster render times,
+            we achieve superior fidelity! Results are played at the same FPS with the actual speed noted above.</p>
+          <div class="embed-responsive embed-responsive-video-synthetic">
+            <video width="640" height="360" autoplay loop muted>
+              <source src="./images/lego-dylin.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="embed-responsive embed-responsive-video-synthetic">
+            <video width="640" height="360" autoplay loop muted>
+              <source src="./images/jumping-dylin.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="embed-responsive embed-responsive-video-synthetic">
+            <video width="640" height="360" autoplay loop muted>
+              <source src="./images/hook-dylin.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3><b>Controllable Extension</h3></b></h3>
+          <p class="text-left"> To get the CoDyLiN architecture, we directly added masks to signify which regions of the scene are controllable and 
+            attribute values for the state of the transition, with -1 being the start of the transition and +1 being the end. With the addition of both of these elements to DyLiN, 
+            we can fully control the smile, closing of the eye, and raising of the eyebrow</p>
+          <div class="embed-responsive embed-responsive-video-synthetic">
+            <video width="640" height="360" autoplay loop muted>
+              <source src="./images/codylin-control.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row ">
+        <div class="col-12">
+            <h3><b>Citation</b></h3>
+                <pre style="background-color: #e9eeef">
+                  <code>
+    @article{yu2023dylin,
+      title={DyLiN: Making Light Field Networks Dynamic},
+      author={Yu, Heng and Julin, Joel and Milacski, Zoltan A and Niinuma, Koichiro and Jeni, Laszlo A},
+      journal={arXiv preprint arXiv:2303.14243},
+      year={2023}
+    }
+                </code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3><b>Acknowledgements</h3></b></h3>
+          <p class="text-left">This research was supported partially by Fujitsu. We thank Chaoyang Wang from Carnegie Mellon University for the helpful discussion.</p>
+          <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   </div>
 
 
